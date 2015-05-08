@@ -8,9 +8,10 @@ class StackSpider(Spider):
     name = "stack"
     allowed_domains = ["stackoverflow.com"]
     start_urls = [
-            #"http://stackoverflow.com/questions?pagesize=50&sort=newest", 
+            "http://stackoverflow.com/questions?pagesize=50&sort=newest", 
             #"http://stackoverflow.com/questions",  
-            "http://www.sina.com.cn"]
+            #"http://www.sina.com.cn"
+            ]
 
     def parse(self, response):
         content = Selector(response)
